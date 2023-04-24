@@ -1,4 +1,4 @@
-package org.example;
+package TrabajoIntegrador;
 
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvValidationException;
@@ -6,9 +6,7 @@ import com.opencsv.exceptions.CsvValidationException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class LeerPronosticos {
 
@@ -22,15 +20,15 @@ public class LeerPronosticos {
                 String participante = fila[0];
                 String equipo1 = fila[1];
                 String equipo2 = fila[5];
-                String resultado = "";
+                String prediccion = "";
                 if (fila[3].equals("X")) {
-                    resultado = "Empate";
+                    prediccion = "Empate";
                 } else if (fila[4].equals("X")) {
-                    resultado = equipo2;
+                    prediccion = equipo2;
                 } else if (fila[2].equals("X")) {
-                    resultado = equipo1;
+                    prediccion = equipo1;
                 }
-                Pronostico pronostico = new Pronostico(participante, equipo1, equipo2, resultado);
+                Pronostico pronostico = new Pronostico(participante, equipo1, equipo2, prediccion);
                 pronosticos.add(pronostico);
             }
         } catch (IOException | CsvValidationException e) {

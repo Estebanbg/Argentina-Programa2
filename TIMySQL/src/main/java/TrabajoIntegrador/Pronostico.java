@@ -1,4 +1,4 @@
-package org.example;
+package TrabajoIntegrador;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -10,5 +10,5 @@ public class Pronostico {
     private String participante;
     private String equipo1;
     private String equipo2;
-    private String resultado;
+    private String prediccion;
 }

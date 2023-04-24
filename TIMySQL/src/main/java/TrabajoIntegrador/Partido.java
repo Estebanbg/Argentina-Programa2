@@ -1,4 +1,4 @@
-package org.example;
+package TrabajoIntegrador;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 

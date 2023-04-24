@@ -7,11 +7,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="TIFinal" />
+        <module name="TIMySQL" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="CopiaTIF5" target="20" />
-    </bytecodeTargetLevel>
   </component>
 </project>
