@@ -1,5 +1,6 @@
 package TrabajoIntegrador;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -9,11 +10,17 @@ import java.util.Map;
 public class Main {
 
     public static void main(String[] args) {
-        String resultadoscsv = "resultados.csv";
+        // Obtener la ruta absoluta del directorio actual de trabajo
+        String rutaActual = new File("").getAbsolutePath();
+
+        // Construir la ruta al archivo resultados.csv
+        String resultadoscsv = rutaActual + File.separator + "data(csv)" + File.separator + "resultados.csv";
         List<Partido> resultados = LeerResultados.obtenerGanadores(resultadoscsv);
 
-        String pronosticoscsv = "pronosticos.csv";
+        // Construir la ruta al archivo pronosticos.csv
+        String pronosticoscsv = rutaActual + File.separator + "data(csv)" + File.separator + "pronosticos.csv";
         List<Pronostico> pronosticos = LeerPronosticos.obtenerPronosticos(pronosticoscsv);
+
 
         List<String> participantes = new ArrayList<>();
         Map<String, Integer> puntosPorParticipante = new HashMap<>();

@@ -48,12 +48,17 @@
                 </configuration>
 
             </plugin>
-
-
-
-
-
         </plugins>
+
+        <resources>
+            <resource>
+                <directory>data(csv)</directory>
+                <targetPath>${project.build.directory}/data(csv)</targetPath>
+                <includes>
+                    <include>*.csv</include>
+                </includes>
+            </resource>
+        </resources>
     </build>
 
     <dependencies>
@@ -67,17 +72,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Dependencia de OpenCSV -->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-collections4</artifactId>
-            <version>4.4</version>
-        </dependency>
-        <dependency>
-            <groupId>com.opencsv</groupId>
-            <artifactId>opencsv</artifactId>
-            <version>5.7.1</version>
-        </dependency>
+
 
         <!-- Dependencia de Lombok -->
         <dependency>
@@ -98,6 +93,8 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.30</version>
         </dependency>
+
+
 
 
     </dependencies>
